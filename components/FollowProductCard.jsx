@@ -9,7 +9,7 @@ const FollowProductCard = ({ src, title }) => {
       </div>
       <Image
         src={src}
-        alt="title"
+        alt={title}
         width={500}
         height={500}
         className="w-full h-full object-cover"

@@ -196,7 +196,7 @@ const Products = () => {
       <Section
         title={"Top Categories"}
         center={false}
-        className={"grid-cols-3"}
+        className={"grid-cols-1 sm:grid-cols-2 md:grid-cols-3"}
       >
         {topCategories.map((product) => (
           <CategoryCard

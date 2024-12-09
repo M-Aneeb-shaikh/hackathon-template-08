@@ -7,7 +7,7 @@ import { twMerge } from "tailwind-merge";
 const ProductCard = ({ image, title, price, label }) => {
   return (
     <div className="bg-white group cursor-pointer mb-4">
-      <div className="h-72 rounded-md overflow-hidden bg-gray-200 relative">
+      <div className="h-72 rounded-md overflow-hidden bg-gray-100 relative">
         {label && (
           <span
             className={twMerge(

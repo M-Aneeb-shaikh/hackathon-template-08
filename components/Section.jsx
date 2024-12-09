@@ -7,13 +7,18 @@ const Section = ({ center = true, className, title, children }) => {
     <div className="w-full max-w-7xl mx-auto py-8">
       <h1
         className={twMerge(
-          "py-6 text-4xl font-semibold",
+          "py-6 text-3xl sm:text-4xl font-semibold",
           center ? "text-center" : "text-left"
         )}
       >
         {title}
       </h1>
-      <div className={twMerge("p-2 grid grid-cols-4 gap-8", className)}>
+      <div
+        className={twMerge(
+          "p-2 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8",
+          className
+        )}
+      >
         {children}
       </div>
     </div>

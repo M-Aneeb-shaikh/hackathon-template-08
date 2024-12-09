@@ -1,28 +1,35 @@
 "use client";
 
+import Image from "next/image";
 import { FaHeart, FaTrash } from "react-icons/fa";
 
 const CartCard = ({ imageUrl, name, variant, size, quantity, mrp }) => {
   return (
-    <div className="flex gap-6 pb-7 border-b">
-      <div className="w-36 h-36 bg-gray-100">
-        <img src={imageUrl} alt={name} className="w-full h-full object-cover" />
+    <div className="flex gap-4 sm:gap-6 pb-7 border-b">
+      <div className="w-28 sm:w-36 h-28 sm:h-36 bg-gray-100">
+        <Image
+          width={200}
+          height={200}
+          src={imageUrl}
+          alt={name}
+          className="w-full h-full object-cover"
+        />
       </div>
 
-      <div className="flex-grow">
-        <div className="flex justify-between">
-          <div>
-            <h3 className="text-base font-medium text-gray-700">{name}</h3>
-            <p className="text-gray-500 mt-3 text-sm">{variant}</p>
-            <div className="mt-1 mb-3 space-x-4">
-              <span className="text-gray-500 text-sm">Size: {size}</span>
-              <span className="text-gray-500 text-sm">
-                Quantity: {quantity}
-              </span>
-            </div>
+      <div className="w-[calc(100%-128px)] sm:w-[calc(100%-168px)]">
+        <div>
+          <div className="flex justify-between w-full flex-wrap gap-x-3">
+            <h3 className="text-base font-medium text-gray-700 truncate">
+              {name}
+            </h3>
+
+            <div className="font-semibold text-gray-900">MRP: ${mrp}</div>
           </div>
-          <div className="text-right">
-            <div className="font-medium text-gray-700">MRP: ${mrp}</div>
+
+          <p className="text-gray-500 mt-3 text-sm">{variant}</p>
+          <div className="mt-1 mb-3 space-x-4">
+            <span className="text-gray-500 text-sm">Size: {size}</span>
+            <span className="text-gray-500 text-sm">Quantity: {quantity}</span>
           </div>
         </div>
 

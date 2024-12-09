@@ -79,7 +79,8 @@ const Page = () => {
       price: 159.99,
       description: "Tactile typing experience with RGB backlighting",
       category: "Electronics",
-      imageUrl: "https://images.unsplash.com/photo-1595225476474-0be12dc681a4",
+      imageUrl: "https://images.unsplash.com/photo-1553062407-98eeb64c6a62",
+      // imageUrl: "https://images.unsplash.com/photo-1595225476474-0be12dc681a4",
     },
     {
       id: 10,
@@ -87,7 +88,8 @@ const Page = () => {
       price: 34.99,
       description: "Lightweight shorts with built-in compression liner",
       category: "Clothing",
-      imageUrl: "https://images.unsplash.com/photo-1556769980-42e113fd21eb",
+      imageUrl: "https://images.unsplash.com/photo-1553062407-98eeb64c6a62",
+      // imageUrl: "https://images.unsplash.com/photo-1556769980-42e113fd21eb",
     },
     {
       id: 11,
@@ -187,9 +189,9 @@ const Page = () => {
         ))}
       </Section>
 
-      <div className="bg-gray-200 py-20">
+      <div className="bg-gray-100 py-20">
         <div className="max-w-7xl w-full mx-auto">
-          <h2 className="p-2 text-center text-5xl font-medium">
+          <h2 className="p-2 text-center text-3xl md:text-5xl font-medium">
             Or Subscribe To The Newsletter
           </h2>
 
@@ -205,12 +207,14 @@ const Page = () => {
             </button>
           </div>
 
-          <h2 className="p-2 text-center text-5xl font-medium">
+          <h2 className="p-2 text-center text-3xl md:text-5xl font-medium">
             Follow Products And Discount On Instagram
           </h2>
-          <div className="mt-10 grid grid-cols-6 gap-5">
+
+          <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-5">
             {allProducts.slice(0, 6).map((product) => (
               <FollowProductCard
+                key={product.id}
                 src={`${product.imageUrl}?auto=format&fit=crop&w=400&q=80`}
                 title={product.title}
               />

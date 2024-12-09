@@ -13,19 +13,20 @@ import { GiCompass } from "react-icons/gi";
 
 const Footer = () => {
   const categories = [
-    { name: "Sofa", href: "/category/sofa" },
-    { name: "Armchair", href: "/category/armchair" },
-    { name: "Wing Chair", href: "/category/wing-chair" },
-    { name: "Desk Chair", href: "/category/desk-chair" },
-    { name: "Wooden Chair", href: "/category/wooden-chair" },
-    { name: "Park Bench", href: "/category/park-bench" },
+    { name: "Sofa", href: "#" },
+    { name: "Armchair", href: "#" },
+    { name: "Wing Chair", href: "#" },
+    { name: "Desk Chair", href: "#" },
+    { name: "Wooden Chair", href: "#" },
+    { name: "Park Bench", href: "#" },
   ];
 
   const support = [
-    { name: "Help & Support", href: "/help-support" },
-    { name: "Terms & Conditions", href: "/terms" },
-    { name: "Privacy Policy", href: "/privacy" },
-    { name: "Help", href: "/help" },
+    { name: "FAQ", href: "FAQ" },
+    { name: "Help & Support", href: "#" },
+    { name: "Terms & Conditions", href: "#" },
+    { name: "Privacy Policy", href: "#" },
+    { name: "Help", href: "#" },
   ];
 
   return (
