@@ -2,7 +2,12 @@
 
 import { twMerge } from "tailwind-merge";
 
-const Section = ({ center = true, className, title, children }) => {
+const Section = ({
+  center = true,
+  className = "grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4",
+  title,
+  children,
+}) => {
   return (
     <div className="w-full max-w-7xl mx-auto py-8">
       <h1
@@ -13,14 +18,7 @@ const Section = ({ center = true, className, title, children }) => {
       >
         {title}
       </h1>
-      <div
-        className={twMerge(
-          "p-2 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8",
-          className
-        )}
-      >
-        {children}
-      </div>
+      <div className={twMerge("p-2 grid gap-8", className)}>{children}</div>
     </div>
   );
 };

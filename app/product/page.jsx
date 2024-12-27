@@ -8,59 +8,78 @@ const Page = () => {
   const featuredProducts = [
     {
       id: 1,
-      title: "Classic White Sneakers",
-      label: "New",
-      price: 79.99,
+      title: "Library Stool Chair",
+      price: 99,
       description:
-        "Minimalist design meets comfort in these versatile white sneakers",
-      category: "Footwear",
-      imageUrl: "https://images.unsplash.com/photo-1549298916-b41d501d3772",
+        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto eum perspiciatis distinctio tempore voluptas dolore quam, eos totam sint voluptatibus.",
+
+      imageUrl: "/images/image7.png",
     },
+
     {
       id: 2,
-      title: "Wireless Noise-Canceling Headphones",
-      label: "Sales",
-      price: 199.99,
-      description: "Premium sound quality with active noise cancellation",
-      category: "Electronics",
-      imageUrl: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e",
+      title: "Library Stool Chair",
+      price: 99,
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto eum perspiciatis distinctio tempore voluptas dolore quam, eos totam sint voluptatibus.",
+
+      imageUrl: "/images/image1.png",
     },
+
     {
       id: 3,
-      title: "Leather Crossbody Bag",
-      price: 129.99,
+      title: "Library Stool Chair",
+
+      price: 99,
       description:
-        "Genuine leather bag with adjustable strap and multiple compartments",
-      category: "Accessories",
-      imageUrl: "https://images.unsplash.com/photo-1590874103328-eac38a683ce7",
+        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto eum perspiciatis distinctio tempore voluptas dolore quam, eos totam sint voluptatibus.",
+
+      imageUrl: "/images/image9.png",
     },
+
     {
       id: 4,
-      title: "Smart Fitness Watch",
-      price: 149.99,
+      title: "Library Stool Chair",
+
+      price: 99,
       description:
-        "Track your health and fitness goals with this advanced smartwatch",
-      category: "Electronics",
-      imageUrl: "https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1",
+        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto eum perspiciatis distinctio tempore voluptas dolore quam, eos totam sint voluptatibus.",
+
+      imageUrl: "/images/image3.png",
+    },
+
+    {
+      id: 5,
+      title: "Library Stool Chair",
+
+      price: 99,
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto eum perspiciatis distinctio tempore voluptas dolore quam, eos totam sint voluptatibus.",
+
+      imageUrl: "/images/image8.png",
     },
   ];
-
   return (
     <div className="">
       <Navbar />
 
       <ShowProductCard
-        title="Professional Camera Backpack"
-        description="Padded protection for your photography gear"
-        imageUrl="https://images.unsplash.com/photo-1553062407-98eeb64c6a62"
-        price={119.99}
+        title="Library Stool Chair"
+        description="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum voluptatem a nobis cumque iste consequatur deserunt consequuntur iure perspiciatis velit."
+        imageUrl="/images/image2.png"
+        price={20}
       />
 
-      <Section title={"Featured Products"} center={false}>
+      <Section
+        title={"Featured Products"}
+        center={false}
+        className="grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5"
+      >
         {featuredProducts.map((product) => (
           <ProductCard
+            cart={false}
             key={product.id}
-            image={`${product.imageUrl}?auto=format&fit=crop&w=400&q=80`}
+            image={product.imageUrl}
             price={product.price}
             title={product.title}
             label={product?.label}

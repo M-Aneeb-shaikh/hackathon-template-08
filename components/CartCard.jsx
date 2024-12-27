@@ -19,11 +19,11 @@ const CartCard = ({ imageUrl, name, variant, size, quantity, mrp }) => {
       <div className="w-[calc(100%-128px)] sm:w-[calc(100%-168px)]">
         <div>
           <div className="flex justify-between w-full flex-wrap gap-x-3">
-            <h3 className="text-base font-medium text-gray-700 truncate">
-              {name}
-            </h3>
+            <h3 className="text-base text-gray-700 truncate">{name}</h3>
 
-            <div className="font-semibold text-gray-900">MRP: ${mrp}</div>
+            <div className="text-base font-medium text-gray-900">
+              MRP: ${mrp}
+            </div>
           </div>
 
           <p className="text-gray-500 mt-3 text-sm">{variant}</p>
@@ -36,11 +36,9 @@ const CartCard = ({ imageUrl, name, variant, size, quantity, mrp }) => {
         <div className="mt-4 flex gap-4">
           <button className="text-gray-600 hover:text-gray-900 flex items-center gap-2">
             <FaHeart size={18} />
-            Save
           </button>
           <button className="text-gray-600 hover:text-gray-900 flex items-center gap-2">
             <FaTrash size={18} />
-            Remove
           </button>
         </div>
       </div>

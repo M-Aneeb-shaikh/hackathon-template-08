@@ -8,9 +8,9 @@ import PopularProducts from "@/components/PopularProducts";
 const Card = ({ icon: Icon, title, description }) => {
   return (
     <div className="w-full bg-gray-100 p-12 rounded-sm">
-      <Icon size={28} className="text-cyan-600" />
-      <h3 className="text-cyan-600 text-xl py-2">{title}</h3>
-      <p className="text-cyan-600">{description}</p>
+      <Icon size={28} className="text-secondary" />
+      <h3 className="text-secondary text-xl py-2">{title}</h3>
+      <p className="text-secondary">{description}</p>
     </div>
   );
 };
@@ -22,7 +22,7 @@ const Page = () => {
 
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row items-center justify-between gap-8 py-10 md:py-20">
-          <div className="w-full md:w-1/2 h-[500px] sm:pr-10 flex flex-col justify-between px-12 py-20 bg-cyan-700">
+          <div className="w-full md:w-1/2 h-[500px] sm:pr-10 flex flex-col justify-between px-12 py-20 bg-primary">
             <div className="">
               <h2 className="text-4xl font-bold text-white mb-4">
                 About Us - Comforty
@@ -34,15 +34,15 @@ const Page = () => {
                 chairs that seamlessly blend style with functionality.
               </p>
             </div>
-            <button className="bg-cyan-600 text-white px-6 py-3 w-fit rounded-md hover:bg-cyan-500 transition-colors duration-300">
+            <button className="bg-secondary hover:bg-light text-white px-6 py-3 w-fit rounded-md transition-colors duration-300">
               View collection
             </button>
           </div>
-          <div className="w-full md:w-1/2 h-[500px] bg-gray-100 p-8 flex items-center justify-center">
+          <div className="w-full md:w-1/2 h-[500px] bg-gray-100 flex items-center justify-center">
             <img
-              src="/images/bannerImage.png"
+              src="/images/image1.png"
               alt="Chair"
-              className="w-auto h-full object-cover"
+              className="w-full h-full object-cover"
             />
           </div>
         </div>

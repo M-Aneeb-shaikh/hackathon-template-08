@@ -7,3 +7,9 @@ body {
   background: white;
   font-family: Arial, Helvetica, sans-serif;
 }
+
+:root {
+  --primary: #007580;
+  --secondary: #258992;
+  --light: #2b97a1;
+}

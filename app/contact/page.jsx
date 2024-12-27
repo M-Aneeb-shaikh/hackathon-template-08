@@ -116,7 +116,7 @@ const Page = () => {
               />
             </div>
             <div className="mt-8">
-              <button className="px-16 py-3 text-white bg-cyan-500 hover:bg-cyan-600 text-lg tracking-wider rounded-lg">
+              <button className="px-20 py-3 text-white bg-secondary hover:bg-light text-base tracking-wider rounded-lg">
                 Submit
               </button>
             </div>

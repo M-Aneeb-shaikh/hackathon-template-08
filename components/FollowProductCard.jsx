@@ -5,7 +5,7 @@ const FollowProductCard = ({ src, title }) => {
   return (
     <div className="w-full h-full aspect-square bg-white rounded-lg group cursor-pointer relative overflow-hidden">
       <div className="absolute z-10 top-0 left-0 bg-black/60 h-full w-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
-        <FaInstagram size={80} color="#ffffff" />
+        <FaInstagram size={50} color="#ffffff" />
       </div>
       <Image
         src={src}

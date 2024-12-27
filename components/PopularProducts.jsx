@@ -5,24 +5,24 @@ const PopularProducts = () => {
   const products = [
     {
       id: 1,
-      name: "Classic White Sneakers",
-      price: 79.99,
+      name: "The Popular Suede Sofa",
+      price: "99.00",
 
-      image: "https://images.unsplash.com/photo-1549298916-b41d501d3772",
+      image: "/images/image13.png",
     },
     {
       id: 2,
-      name: "Wireless Noise-Canceling Headphones",
-      price: 199.99,
+      name: "The Dandy Chair",
+      price: "99.00",
 
-      image: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e",
+      image: "/images/image12.png",
     },
     {
       id: 3,
-      name: "Leather Crossbody Bag",
-      price: 129.99,
+      name: "The Dandy Chair",
+      price: "99.00",
 
-      image: "https://images.unsplash.com/photo-1590874103328-eac38a683ce7",
+      image: "/images/image11.png",
     },
   ];
 
@@ -32,12 +32,12 @@ const PopularProducts = () => {
         Our Popular Products
       </h2>
 
-      <div className="flex flex-col lg:flex-row items-center lg:space-x-6">
-        <div className="w-full lg:w-1/2 overflow-hidden hover:scale-105 transition duration-500 mb-8">
+      <div className="flex flex-col lg:flex-row lg:space-x-6">
+        <div className="w-full lg:w-1/2 overflow-hidden hover:scale-105 transition duration-300 mb-8">
           <img
             src={products[0].image}
             alt={products[0].name}
-            className="w-full h-96 object-cover"
+            className="w-full object-cover"
           />
           <div className="py-4">
             <h3 className="text-xl font-medium mb-2 text-gray-800 truncate">
@@ -53,12 +53,12 @@ const PopularProducts = () => {
           {products.slice(1).map((product, index) => (
             <div
               key={index}
-              className="bg-white overflow-hidden w-full sm:w-1/2 hover:scale-105 transition duration-500"
+              className="bg-white overflow-hidden w-full sm:w-1/2 hover:scale-105 transition duration-300"
             >
               <img
                 src={product.image}
                 alt={product.name}
-                className="w-full h-96 object-cover"
+                className="w-full object-cover"
               />
               <div className="py-4">
                 <h3 className="text-xl font-medium text-gray-800 mb-2 truncate">

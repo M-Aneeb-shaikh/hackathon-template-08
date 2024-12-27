@@ -3,10 +3,12 @@
 import React, { useState } from "react";
 import { usePathname } from "next/navigation";
 import { FaBars, FaShoppingCart } from "react-icons/fa";
-import { GiCompass } from "react-icons/gi";
 import Link from "next/link";
 import { twMerge } from "tailwind-merge";
 import { FaX } from "react-icons/fa6";
+import Logo from "./Logo";
+import { MdOutlineDone } from "react-icons/md";
+import { IoIosArrowDown, IoIosInformationCircleOutline } from "react-icons/io";
 
 const NavLink = ({ href, name }) => {
   const pathname = usePathname();
@@ -14,10 +16,10 @@ const NavLink = ({ href, name }) => {
   return (
     <Link
       href={href}
-      className={`pb-2 mb-3 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium ${
+      className={`pb-2 mb-3 inline-flex items-center px-1 pt-1 border-none text-sm font-medium ${
         pathname === href
-          ? "border-cyan-500 text-cyan-500"
-          : "border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700"
+          ? "text-primary font-semibold"
+          : "text-gray-500 hover:text-secondary"
       }`}
     >
       {name}
@@ -36,10 +38,31 @@ const Navbar = () => {
 
   return (
     <nav className="bg-white shadow-md relative">
+      <header className="w-full bg-[#272343]">
+        <div className="max-w-7xl w-full mx-auto p-2 flex items-center justify-between">
+          <div className="flex items-center space-x-2">
+            <MdOutlineDone className="text-white" />
+            <p className="text-left text-sm text-white tracking-wider font-normal">
+              Free Shipping On All Orders Over $50
+            </p>
+          </div>
+          <div className="flex items-center space-x-5">
+            <div className="flex items-center space-x-1">
+              <p className="text-white text-sm">Eng</p>
+              <IoIosArrowDown className="text-white" />
+            </div>
+            <p className="text-white text-sm">Faqs</p>
+            <div className="flex items-center space-x-1">
+              <IoIosInformationCircleOutline className="text-white" />
+              <p className="text-white text-sm">Need Help</p>
+            </div>
+          </div>
+        </div>
+      </header>
       <div className="bg-gray-100 py-5 px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between max-w-7xl w-full mx-auto">
           <a className="flex items-center" href="/">
-            <GiCompass className="h-10 w-10 text-cyan-500" />
+            <Logo />
             <span className="ml-2 text-2xl font-bold text-gray-700">
               Comforty
             </span>
@@ -50,7 +73,7 @@ const Navbar = () => {
           >
             <FaShoppingCart className="h-5 w-5" />
             <span className="ml-2 text-sm">Cart</span>
-            <span className="ml-2 text-sm flex items-center justify-center bg-cyan-500 rounded-full min-h-5 min-w-5">
+            <span className="ml-2 text-xs flex items-center justify-center text-white bg-primary rounded-full min-h-5 min-w-5">
               2
             </span>
           </a>
@@ -89,7 +112,7 @@ const Navbar = () => {
 
       <div
         className={twMerge(
-          "absolute flex sm:hidden flex-col sm:space-x-8 bg-white p-4 pb-10 transition duration-300 w-80 shadow-md",
+          "absolute z-10 flex sm:hidden flex-col sm:space-x-8 bg-white p-4 pb-10 transition duration-300 w-80 shadow-md",
           showMenu ? "translate-x-0" : "-translate-x-full"
         )}
       >

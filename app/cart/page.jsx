@@ -8,21 +8,21 @@ const Page = () => {
   const cartItems = [
     {
       id: 1,
-      name: "Classic White Sneakers",
-      variant: "Ashen Slate/Cobalt Bliss",
-      size: "L",
-      quantity: 1,
-      mrp: 79.99,
-      image: "https://images.unsplash.com/photo-1549298916-b41d501d3772",
-    },
-    {
-      id: 2,
-      name: "Wireless Noise-Canceling Headphones",
+      name: "Library Stool Chair",
       variant: "Ashen Slate/Cobalt Bliss",
       size: "L",
       quantity: 1,
       mrp: 99,
-      image: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e",
+      image: "/images/image3.png",
+    },
+    {
+      id: 2,
+      name: "Library Stool Chair",
+      variant: "Ashen Slate/Cobalt Bliss",
+      size: "L",
+      quantity: 1,
+      mrp: 99,
+      image: "/images/image8.png",
     },
   ];
 
@@ -75,7 +75,7 @@ const Page = () => {
                 </div>
               </div>
 
-              <button className="w-full bg-cyan-600 text-white py-3 rounded-full mt-6 hover:bg-cyan-700 transition-colors">
+              <button className="w-full text-sm bg-secondary text-white py-4 rounded-full mt-6 hover:bg-light transition-colors">
                 Member Checkout
               </button>
             </div>

@@ -28,7 +28,7 @@ const ShowProductCard = ({
           </h1>
 
           <div className="py-6 md:py-10 border-b-2 border-gray-400">
-            <span className="bg-cyan-600 text-white px-6 py-4 rounded-full text-lg font-semibold">
+            <span className="bg-secondary text-white px-6 py-4 rounded-full text-lg font-semibold">
               ${price.toFixed(2)} USD
             </span>
           </div>
@@ -39,7 +39,7 @@ const ShowProductCard = ({
 
           <button
             onClick={onAddToCart}
-            className="flex items-center justify-center gap-2 bg-cyan-600 text-white px-6 py-4 rounded-lg hover:bg-cyan-700 transition-colors w-[230px]"
+            className="flex items-center justify-center gap-2 bg-secondary text-white px-6 py-4 rounded-lg hover:bg-light transition-colors w-[230px]"
           >
             <FaShoppingCart size={20} />
             Add To Cart

@@ -4,10 +4,10 @@ import Image from "next/image";
 import { FaShoppingCart } from "react-icons/fa";
 import { twMerge } from "tailwind-merge";
 
-const ProductCard = ({ image, title, price, label }) => {
+const ProductCard = ({ image, title, price, label, cart = true }) => {
   return (
     <div className="bg-white group cursor-pointer mb-4">
-      <div className="h-72 rounded-md overflow-hidden bg-gray-100 relative">
+      <div className="rounded-md overflow-hidden bg-gray-100 relative">
         {label && (
           <span
             className={twMerge(
@@ -23,20 +23,31 @@ const ProductCard = ({ image, title, price, label }) => {
           height={500}
           src={image}
           alt={title}
-          className="h-full object-cover"
+          className="w-full aspect-square object-cover"
         />
       </div>
-      <div className="py-4 flex justify-between w-full">
-        <div className="w-[calc(100%-52px)]">
-          <h3 className="text-base font-medium text-gray-700 group-hover:text-cyan-500 transition duration-300 truncate">
-            {title}
-          </h3>
+      {cart ? (
+        <div className="py-4 flex justify-between w-full">
+          <div className="w-[calc(100%-52px)]">
+            <h3 className="text-base font-medium text-gray-700 group-hover:text-secondary transition duration-300 truncate">
+              {title}
+            </h3>
+            <p className="text-base text-gray-800 font-bold">${price}</p>
+          </div>
+          <button className="min-h-12 min-w-12 flex items-center justify-center bg-gray-500 group-hover:bg-secondary text-white rounded-md transition duration-300">
+            <FaShoppingCart className="h-6 w-6" />
+          </button>
+        </div>
+      ) : (
+        <div className="py-4 flex justify-between w-full">
+          <div className="w-[calc(100%-52px)]">
+            <h3 className="text-base font-medium text-gray-700 group-hover:text-secondary transition duration-300 truncate">
+              {title}
+            </h3>
+          </div>
           <p className="text-base text-gray-800 font-bold">${price}</p>
         </div>
-        <button className="min-h-12 min-w-12 flex items-center justify-center bg-gray-500 group-hover:bg-cyan-500 text-white rounded-md transition duration-300">
-          <FaShoppingCart className="h-6 w-6" />
-        </button>
-      </div>
+      )}
     </div>
   );
 };
